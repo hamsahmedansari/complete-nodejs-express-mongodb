@@ -1,19 +1,20 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
-// get method check route and invoke callback function provided
+const publicDirPath = path.join(__dirname, "./public");
+
+app.use(express.static(publicDirPath));
+
 app.get("/", function(req, res) {
-  res.send("Welcome to world of Express");
-});
-app.get("/helloworld", function(req, res) {
-  res.send("hello world");
-});
-app.get("/docs/*", function(req, res) {
-  res.send("No document found");
+  res.send("<h1>Welcome to world of Express</h1>");
 });
 
-app.get("*", function(req, res) {
-  res.send("404 Error Page");
+app.get("/helloworld", function(req, res) {
+  res.send({
+    name: "Aamir",
+    msg: "Hello world"
+  });
 });
 
 app.listen(3000, () => {

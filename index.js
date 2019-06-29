@@ -1,9 +1,3 @@
-// Validator
-const validator = require("validator");
+console.log(process.argv);
 
-console.log(validator.isEmail("aamirpinger@yahoo.com"));
-
-// Chalk
-const chalk = require("chalk");
-
-console.log(chalk.bgGreen.red.bold("Hello world!"));
+console.log(`Welcome ${process.argv[2]}`);

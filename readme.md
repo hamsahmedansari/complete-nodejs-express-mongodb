@@ -47,6 +47,10 @@ app.get('*', function(req, res){
 })
 ```
 
+## Render Html
+
+Check `renderHtml.js` and run `node renderHtml.js`
+
 ## OutPut
 
 ![](https://i.ibb.co/DL9TXds/Screenshot-from-2019-06-29-18-10-32.png)
@@ -54,3 +58,4 @@ app.get('*', function(req, res){
 ![](https://i.ibb.co/9HqVRZS/Screenshot-from-2019-06-29-18-10-19.png)
 ![](https://i.ibb.co/VY7gFMV/Screenshot-from-2019-06-29-18-19-03.png)
 ![](https://i.ibb.co/jbQ6MfH/Screenshot-from-2019-06-29-18-19-06.png)
+![](https://i.ibb.co/CVP6PnY/Screenshot-from-2019-06-29-18-25-34.png)

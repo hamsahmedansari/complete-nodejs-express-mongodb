@@ -1,25 +1,32 @@
-# NPM Packages
+# Todo App
 
-- [validator](https://www.npmjs.com/package/validator)
-- [chalk](https://www.npmjs.com/package/chalk)
+## Requirement
 
-### Installation
+We need to make 4 functionality for users to use
 
-`npm i chalk`
+1. Add new Todo Task
+2. Remove particular Task
+3. Read a Task
+4. List all Todo Tasks
 
-`npm i validator`
+### Add new Todo Task
 
-### Verify Installation
+- User will input two values as command line input for new Todo Task
 
-You can verify installation by checking it in package.json in root of your project
+  1.  Title
+  2.  Description
 
-```
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "validator": "^11.0.0"
-  }
-```
+- These both will be string values and mandatory
+- Then add into data.txt if that title is not already present in the data file
+
+### Remove particular Task
+
+- User Input setting is done
+- Now let do coding for task to get deleted if already present in data.txt file
+- If task not found throw a message to inform user
 
 ## Output
 
-![](https://i.imgur.com/1Wqln00.png)
+### Add new Todo Task
+
+![](https://i.imgur.com/PTQNio0.png)

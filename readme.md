@@ -2,8 +2,11 @@
 
 ## Run
 
-`node index.js Aamir`
+```
+node index --title="Greet Aamir"
+
+```
 
 ## Output
 
-![](https://i.imgur.com/iCuilxB.png)
+![](https://i.imgur.com/7fAkICH.png)

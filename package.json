@@ -1,0 +1,27 @@
+{
+  "name": "learning-nodejs-expressjs-mongodb",
+  "version": "1.0.0",
+  "description": "Complete Learning Nodejs ExpressJs & MongoDb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamsahmedansari/complete-nodejs-express-mongodb.git"
+  },
+  "keywords": [
+    "learning",
+    "nodejs",
+    "expressjs",
+    "mongodb",
+    "serverless",
+    "quicklearning"
+  ],
+  "author": "Hams Ahmed Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamsahmedansari/complete-nodejs-express-mongodb/issues"
+  },
+  "homepage": "https://github.com/hamsahmedansari/complete-nodejs-express-mongodb#readme"
+}

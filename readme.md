@@ -86,3 +86,20 @@ const options = {
 ## Output
 
 ![](https://i.ibb.co/0sgjqjF/Screenshot-from-2019-06-29-16-30-28.png)
+
+# Useful Apis
+
+1. News API
+
+   - https://newsapi.org
+
+2. Weather API
+
+   - https://developer.accuweather.com/
+
+3. Geolocation API [longitude,latitude] of any address
+
+   - https://docs.mapbox.com/api/search/#geocoding
+
+4. Location details based on IP address (You can use request-ip npm module to get client side ip)
+   - https://ipgeolocation.io/

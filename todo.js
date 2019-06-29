@@ -67,9 +67,25 @@ const listTasks = () => {
     });
   }
 };
+const getTask = title => {
+  const data = loadData();
+
+  if (data.length === 0) {
+    console.log(chalk.inverse.bold("No Tasks to list!"));
+  }
+
+  const dataFound = data.find(d => d.title === title);
+  if (dataFound) {
+    console.log(chalk.white.bgBlue.bold(dataFound.title));
+    console.log(chalk.blue("   " + dataFound.description));
+  } else {
+    console.log(chalk.bgRed.white.bold("Task not found!"));
+  }
+};
 
 module.exports = {
   addTask,
   listTasks,
+  getTask,
   deleteTask
 };

@@ -47,7 +47,7 @@ We need to make 4 functionality for users to use
 
 ![](https://i.imgur.com/ZHYhVHB.png)
 
-### RList all Todo Tasks
+### List all Todo Tasks
 
 #### Command
 
@@ -56,3 +56,23 @@ We need to make 4 functionality for users to use
 #### Output
 
 ![](https://i.imgur.com/l5vycUy.png)
+
+### Read a Single Task
+
+#### Command
+
+`node index.js get -t "prepare node slides"`
+
+#### Output
+
+![](https://i.imgur.com/xJvsrUT.png)
+
+### Help
+
+#### Command
+
+`node index.js --help`
+
+### Output
+
+![](https://i.imgur.com/Z7joaDo.png)

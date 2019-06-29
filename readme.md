@@ -1,25 +1,70 @@
-# NPM Packages
+# File System Module
 
-- [validator](https://www.npmjs.com/package/validator)
-- [chalk](https://www.npmjs.com/package/chalk)
+- JSON.stringify
+- JSON.parse
+- Writing To The File
+- Reading With Exception Handling
 
-### Installation
+## JSON.stringify & JSON.parse
 
-`npm i chalk`
-
-`npm i validator`
-
-### Verify Installation
-
-You can verify installation by checking it in package.json in root of your project
+### Stringify
 
 ```
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "validator": "^11.0.0"
-  }
+const obj = {
+  firstName: "Aamir",
+  lastName: "Pinger",
+  city: "Karachi",
+  country: "Pakistan"
+};
+
+const jsnStr = JSON.stringify(obj);
+
+console.log(obj);
+console.log(jsnStr);
+console.log(obj.firstName);
+console.log(jsnStr.firstName);
+
 ```
 
-## Output
+### Parse
 
-![](https://i.imgur.com/1Wqln00.png)
+```
+const obj = {
+  firstName: "Aamir",
+  lastName: "Pinger",
+  city: "Karachi",
+  country: "Pakistan"
+};
+
+const jsnStr = JSON.stringify(obj);
+
+console.log(obj);
+console.log(jsnStr);
+console.log(obj.firstName);
+console.log(jsnStr.firstName);
+const newObj = JSON.parse(jsnStr);
+console.log(newObj);
+
+```
+
+### Output
+
+![](https://i.imgur.com/xnarPlK.png)
+
+## Writing & Reading To The File
+
+#### Writing in File
+
+`node write.js`
+
+#### Reading in File
+
+`node read.js`
+
+#### Reading in File with Error Handing
+
+`node readingFromFile.js`
+
+### Output
+
+![](https://i.imgur.com/h2Kx4bD.png)

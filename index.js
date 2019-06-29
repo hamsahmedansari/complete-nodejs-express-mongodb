@@ -1,4 +1,9 @@
-const printMsg = require("./msg");
+// Validator
+const validator = require("validator");
 
-let msg = printMsg();
-console.log(msg);
+console.log(validator.isEmail("aamirpinger@yahoo.com"));
+
+// Chalk
+const chalk = require("chalk");
+
+console.log(chalk.bgGreen.red.bold("Hello world!"));

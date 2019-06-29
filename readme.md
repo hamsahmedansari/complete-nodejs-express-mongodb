@@ -1,6 +1,6 @@
 # Serving static files in Express
 
-1. Just command `node index.js`
+1. Just run command `node index.js`
 2. Open `http://localhost:3000/about.html` & `http://localhost:3000/index.html`
 
 # Output

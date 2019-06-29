@@ -25,8 +25,24 @@ We need to make 4 functionality for users to use
 - Now let do coding for task to get deleted if already present in data.txt file
 - If task not found throw a message to inform user
 
-## Output
+## Result
 
 ### Add new Todo Task
 
+#### Command
+
+`node index.js add -t "prepare node slides" -d "node slide to be prepared before saturday"`
+
+#### Output
+
 ![](https://i.imgur.com/PTQNio0.png)
+
+### Remove particular Task
+
+#### Command
+
+`node index.js delete -t "prepare node slides"`
+
+#### Output
+
+![](https://i.imgur.com/ZHYhVHB.png)

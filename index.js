@@ -1,5 +1,5 @@
 const yargs = require("yargs");
-const { addTask } = require("./todo");
+const { addTask, deleteTask } = require("./todo");
 
 yargs.command({
   command: "add",
@@ -20,6 +20,21 @@ yargs.command({
   },
   handler: function(argv) {
     addTask(argv.title, argv.description);
+  }
+});
+yargs.command({
+  command: "delete",
+  describe: "This command is used to delete a Todo task.",
+  builder: {
+    title: {
+      describe: "Todo task title to delete",
+      alias: "t",
+      demandOption: true,
+      type: "string"
+    }
+  },
+  handler: function(argv) {
+    deleteTask(argv.title);
   }
 });
 

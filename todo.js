@@ -1,4 +1,5 @@
 const fs = require("fs");
+const chalk = require("chalk");
 
 let data = [];
 
@@ -40,7 +41,21 @@ const chkForDuplicate = (title, data) => {
   const duplicateData = data.find(d => d.title === title);
   return !duplicateData ? false : true;
 };
+const deleteTask = title => {
+  data = loadData();
 
+  const filteredData = data.filter(d => d.title !== title);
+
+  const taskFound = filteredData.length !== data.length;
+
+  if (taskFound) {
+    saveTask(filteredData);
+    console.log(chalk.bgGreen.bold(`Todo task - ${title} - removed!!`));
+  } else {
+    console.log(chalk.bgRed.bold("Task not found!"));
+  }
+};
 module.exports = {
-  addTask
+  addTask,
+  deleteTask
 };

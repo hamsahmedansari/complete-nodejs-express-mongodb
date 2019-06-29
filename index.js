@@ -1,5 +1,5 @@
 const yargs = require("yargs");
-const { addTask, deleteTask } = require("./todo");
+const { addTask, deleteTask, listTasks } = require("./todo");
 
 yargs.command({
   command: "add",
@@ -37,5 +37,11 @@ yargs.command({
     deleteTask(argv.title);
   }
 });
-
+yargs.command({
+  command: "all",
+  describe: "This command is used to List All Todo's task.",
+  handler: function(argv) {
+    listTasks();
+  }
+});
 yargs.parse();

@@ -46,3 +46,13 @@ We need to make 4 functionality for users to use
 #### Output
 
 ![](https://i.imgur.com/ZHYhVHB.png)
+
+### RList all Todo Tasks
+
+#### Command
+
+`node index.js all`
+
+#### Output
+
+![](https://i.imgur.com/l5vycUy.png)

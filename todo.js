@@ -55,7 +55,21 @@ const deleteTask = title => {
     console.log(chalk.bgRed.bold("Task not found!"));
   }
 };
+
+const listTasks = () => {
+  const data = loadData();
+  if (data.length === 0) {
+    console.log(chalk.inverse.bold("No Tasks to list!"));
+  } else {
+    data.map(d => {
+      console.log(chalk.white.bgBlue.bold(d.title));
+      console.log(chalk.blue("   " + d.title));
+    });
+  }
+};
+
 module.exports = {
   addTask,
+  listTasks,
   deleteTask
 };

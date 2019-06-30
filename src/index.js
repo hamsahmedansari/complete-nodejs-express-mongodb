@@ -7,43 +7,42 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.post("/profiles", (req, res) => {
-  const profile = Profiles(req.body);
-  profile
-    .save()
-    .then(() => {
-      res.send(profile);
-    })
-    .catch(e => {
-      res.status(400);
-      res.send(e);
-    });
+app.post("/profiles", async (req, res) => {
+  try {
+    const profile = await Profiles(req.body).save();
+    res.send(profile);
+  } catch (e) {
+    res.status(400).send(e);
+  }
+});
+app.get("/profiles", async (req, res) => {
+  try {
+    const records = await Profiles.find({});
+    if (!records) {
+      res.status(404).send();
+
+      res.send(records);
+    }
+  } catch (e) {
+    res.status(500).send();
+  }
 });
 
-app.get("/profiles", (req, res) => {
-  Profiles.find({})
-    .then(profiles => {
-      res.send(profiles);
-    })
-    .catch(e => {
-      res.status(500).send();
-    });
-});
-
-app.get("/profiles/:id", (req, res) => {
+app.get("/profiles/:id", async (req, res) => {
   const _id = req.params.id;
   console.log(_id);
-  Profiles.findById(_id)
-    .then(profile => {
-      if (!profile) {
-        return res.status(404).send();
-      }
+
+  try {
+    const profile = await Profiles.findById(_id);
+
+    if (!profile) {
+      res.status(404).send("No profile found");
 
       res.send(profile);
-    })
-    .catch(e => {
-      res.status(500).send(e);
-    });
+    }
+  } catch (e) {
+    res.status(500).send(e);
+  }
 });
 
 app.listen(port, () => {

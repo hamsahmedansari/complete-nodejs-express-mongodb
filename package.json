@@ -31,6 +31,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "validator": "^11.0.0",
     "yargs": "^13.2.4"
 =======
@@ -52,6 +53,11 @@
 =======
     "mongoose": "^5.6.2",
 >>>>>>> af896d2c2ef2c2e8bb8badfb58de869a5e41f800
+=======
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.2",
+>>>>>>> 929b496c716a8d180a1a4cae104ec57ef067db0b
     "validator": "^11.0.0"
 >>>>>>> 49c9db5457cd9fc00050659717071ccba439b4e3
   }

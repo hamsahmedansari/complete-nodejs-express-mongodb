@@ -41,8 +41,11 @@ routes.get("/profiles/:id", async (req, res) => {
 });
 
 routes.patch("/profiles/:id", async (req, res) => {
-  const fieldsToUpdate = Object.keys(req.body);
-  const fieldsInModel = ["name", "age", "graduate", "email"];
+  const changedProfile = req.body;
+
+  const fieldsToUpdate = Object.keys(changedProfile);
+
+  const fieldsInModel = ["name", "age", "graduate", "email", "password"];
   const isUpdateAllowed = fieldsToUpdate.every(field =>
     fieldsInModel.includes(field)
   );
@@ -52,13 +55,14 @@ routes.patch("/profiles/:id", async (req, res) => {
   }
 
   try {
-    const profile = await Profiles.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true
-    });
+    //const profile = await Profiles.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
+    const profile = await Profiles.findById(req.params.id);
     if (!profile) {
       return res.status(404).send();
     }
+
+    Object.assign(profile, changedProfile);
+    await profile.save();
     res.send(profile);
   } catch (e) {
     res.status(400).send(e);

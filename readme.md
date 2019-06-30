@@ -33,3 +33,6 @@
 - Separating Router to different files
 
   [Click Here](https://github.com/hamsahmedansari/complete-nodejs-express-mongodb/tree/534565b93e207db09143996897292c14f04dc664)
+
+- Password stored as a hash value
+  - Install bcryptjs `npm i bcryptjs`

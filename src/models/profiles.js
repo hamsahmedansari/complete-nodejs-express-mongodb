@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
+
 // const Profiles = mongoose.model("Profiles", {
 //   name: {
 //     type: String
@@ -24,6 +26,15 @@ const Profiles = mongoose.model("Profiles", {
       }
     },
     graduate: { type: Boolean }
+  },
+  email: {
+    type: String,
+    required: true,
+    validate(value) {
+      if (!validator.isEmail(value)) {
+        throw new Error("Email is invalid!");
+      }
+    }
   }
 });
 

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const jwt = require("jsonwebtoken");
 const profileSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -38,7 +38,15 @@ const profileSchema = new mongoose.Schema({
         throw Error('Password cannot contain "password"');
       }
     }
-  }
+  },
+  tokens: [
+    {
+      token: {
+        type: String,
+        required: true
+      }
+    }
+  ]
 });
 
 profileSchema.pre("save", async function(next) {
@@ -66,6 +74,14 @@ profileSchema.statics.findByCredentials = async (email, password) => {
   }
 
   return profile;
+};
+profileSchema.methods.generateAuthToken = async function() {
+  const profile = this;
+
+  const token = jwt.sign({ _id: profile._id.toString() }, "thisIsMySecretKey");
+  profile.tokens = profile.tokens.concat({ token });
+  await profile.save();
+  return token;
 };
 
 const Profiles = mongoose.model("Profiles", profileSchema);

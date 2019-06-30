@@ -37,3 +37,8 @@
 - Password stored as a hash value
   - Install bcryptjs `npm i bcryptjs`
   - [Click Here](https://github.com/hamsahmedansari/complete-nodejs-express-mongodb/tree/113871c6d759c64295a85211c461f6029bd66f4b)
+- User Login
+  [Click Here](https://github.com/hamsahmedansari/complete-nodejs-express-mongodb/tree/f7c7cc716414475e9bda1880d46a2075ba53bf8b)
+- Web Tokens
+  - Install jsonwebtoken `npm i jsonwebtoken`
+    [Click Here]()

@@ -1,12 +1,12 @@
 # Learning Node.js & Express.js With MongoDb
 
-> We are try to Add New Excise every week
+> We are try to Add New Excise & Lectures every week so Stay _Connected_
 
 ## How To Study
 
 - This course is deign for those how know Javascript ES6 and basic Programming.
 
-- _Please Submit your Assignment/Daily Activity on twitter and add HashTag **#LearnWithAamir** and don't forgot to support us :smile:_
+- _Please Submit your Assignment/Daily Activity on twitter and add HashTag **#LearnWithAamir** and don't forgot to support us :rocket:_
 
 ## Table of Content
 
@@ -56,7 +56,7 @@ Full _MERN_ Stack Software Engineer (_DevOps_), Trainer and Program Lead at PIAI
 
 ## Contributor
 
-## [Hams Ahmed Ansari](https://github.com/hamsahmedansari/)
+### [Hams Ahmed Ansari](https://github.com/hamsahmedansari/)
 
 A passionate _Full MERN Stack Developer_ and loves to solve algorithmic problems.
 

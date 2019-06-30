@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"firstName":"Aamir","lastName":"Pinger","city":"Karachi","country":"Pakistan"}
+=======
+[{"title":"prepare node slides","description":"node slide to be prepared before saturday"}]
+>>>>>>> 62fe55c85761d2754ec3e27d7c6f2c8770fe3f2b

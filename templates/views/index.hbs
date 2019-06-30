@@ -3,14 +3,20 @@
 <head>
     <title>Node HTML file onto the browser</title>
     <link rel="stylesheet" href="./css/style.css" />
-
+    <script src='/js/app.js'></script>
 </head>
 
 <body>
     {{>header}}
-    <h1>{{title}}</h1>
-    <h2>{{course}}</h2>
-    <h3>Class is conducted by : {{teacher}}</h3>
+    <input type="text" id="txtWord">
+
+    <button onclick="fetchDefinition()">
+        Search
+    </button>
+    <div>
+        <h1 id="h1Word"></h1>
+        <h3 id="h3Definition"></h3>
+    </div>
     {{>footer}}
 </body>
 

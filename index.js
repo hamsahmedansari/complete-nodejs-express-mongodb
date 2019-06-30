@@ -77,25 +77,25 @@ app.set("views", viewFolderPath);
 hbs.registerPartials(partialFolderPath);
 app.use(express.static(publicDirPath));
 
-// app.get("/", (req, res) => {
-//   res.render("index");
-// });
-
 app.get("/", (req, res) => {
-  if (!req.query.teacher) {
-    return res.send({ error: "Teacher name not provided!" });
-  } else if (!req.query.course) {
-    return res.send({ error: "Course name not provided!" });
-  }
-
-  const { teacher, course } = req.query;
-
-  res.render("index", {
-    title: "This is dynamic data page",
-    course: `we are learning this in our ${course} class`,
-    teacher
-  });
+  res.render("index");
 });
+
+// app.get("/", (req, res) => {
+//   if (!req.query.teacher) {
+//     return res.send({ error: "Teacher name not provided!" });
+//   } else if (!req.query.course) {
+//     return res.send({ error: "Course name not provided!" });
+//   }
+
+//   const { teacher, course } = req.query;
+
+//   res.render("index", {
+//     title: "This is dynamic data page",
+//     course: `we are learning this in our ${course} class`,
+//     teacher
+//   });
+// });
 // API CALL BASED ON QUERY STRING
 app.get("/search", (req, res) => {
   const { word } = req.query;

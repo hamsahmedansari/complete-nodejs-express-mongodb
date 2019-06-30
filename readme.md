@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Command Line Arguments
 
 - Yargs Basic
@@ -333,19 +334,16 @@ const options = {
 =======
 # QUERY STRING
 >>>>>>> 6c5e6668bc6dfe42f77e001f7c41996c1959fed2
+=======
+# FETCH API
+>>>>>>> 97120518d02839cae101201db80773fb35ed2c19
 
 1. Just run command `node index.js`
-
-## Simple
-
-- Open `http://localhost:3000/?teacher=irfan%20ali&course=node%20express`
-
-## With Request
-
-- Open `http://localhost:3000/search?word=chai`
+2. Open `http://localhost:3000/`
 
 # Output
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -472,3 +470,6 @@ Make sure you show only relevant part of response received from every API and do
 
 ![](https://i.ibb.co/9y6Nf8m/Screenshot-from-2019-06-30-15-53-48.png)
 >>>>>>> 6c5e6668bc6dfe42f77e001f7c41996c1959fed2
+=======
+![](https://i.ibb.co/vzStDmp/Screenshot-from-2019-06-30-16-00-56.png)
+>>>>>>> 97120518d02839cae101201db80773fb35ed2c19

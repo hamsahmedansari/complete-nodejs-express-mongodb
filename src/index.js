@@ -20,6 +20,32 @@ app.post("/profiles", (req, res) => {
     });
 });
 
+app.get("/profiles", (req, res) => {
+  Profiles.find({})
+    .then(profiles => {
+      res.send(profiles);
+    })
+    .catch(e => {
+      res.status(500).send();
+    });
+});
+
+app.get("/profiles/:id", (req, res) => {
+  const _id = req.params.id;
+  console.log(_id);
+  Profiles.findById(_id)
+    .then(profile => {
+      if (!profile) {
+        return res.status(404).send();
+      }
+
+      res.send(profile);
+    })
+    .catch(e => {
+      res.status(500).send(e);
+    });
+});
+
 app.listen(port, () => {
   console.log("Server is up on port " + port);
 });

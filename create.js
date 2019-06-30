@@ -14,16 +14,24 @@ MongoClient.connect(
     }
     const db = client.db(databaseName);
 
-    db.collection("profile").insertMany([
-      {
-        name: "Irfan",
-        email: "irfanali@xyz.com"
-      },
-      {
-        name: "Zia Khan",
-        email: "zia@panacloud.com"
+    db.collection("profile").insertMany(
+      [
+        {
+          name: "Irfan",
+          email: "irfanali@xyz.com"
+        },
+        {
+          name: "Zia Khan",
+          email: "zia@panacloud.com"
+        }
+      ],
+      (error, response) => {
+        if (error) {
+          return console.log("Error inserting document!");
+        }
+        console.log(response.ops);
       }
-    ]);
+    );
 
     console.log("DB connected successfully!");
   }

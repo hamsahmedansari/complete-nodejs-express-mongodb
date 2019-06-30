@@ -70,6 +70,18 @@ app.patch("/profiles/:id", async (req, res) => {
   }
 });
 
+app.delete("/profiles/:id", async (req, res) => {
+  try {
+    const profile = await Profiles.findByIdAndDelete(req.params.id);
+    if (!profile) {
+      res.status(404).send();
+    }
+    res.send(profile);
+  } catch (e) {
+    res.status(500).send();
+  }
+});
+
 app.listen(port, () => {
   console.log("Server is up on port " + port);
 });

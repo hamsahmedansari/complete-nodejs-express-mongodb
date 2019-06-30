@@ -17,15 +17,22 @@ const validator = require("validator");
 // });
 
 const Profiles = mongoose.model("Profiles", {
-  name: { type: String },
+  name: {
+    type: String,
+    required: true
+  },
   age: {
     type: Number,
+    default: 0,
     validate(value) {
       if (value < 0) {
         throw new Error("Age must be positive number");
       }
-    },
-    graduate: { type: Boolean }
+    }
+  },
+  graduate: {
+    type: Boolean,
+    default: false
   },
   email: {
     type: String,

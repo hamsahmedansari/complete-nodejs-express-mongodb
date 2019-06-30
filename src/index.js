@@ -3,11 +3,8 @@ const Profiles = require("./models/profiles");
 
 const newRec = Profiles({
   name: "Aamir",
-  age: 38,
-  graduate: true,
-  email: "axc@.com"
+  email: "axc@abc.com"
 });
-
 newRec
   .save()
   .then(result => {

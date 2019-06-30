@@ -1,25 +1,26 @@
-# All That Matters a Web App
+# MongoDB
 
-ALL THAT MATTER CLI APP into a web app
+## Overview
 
-## Requirement
+- MongoDB is an open source database and it's also available for all operating systems
+- MongoDB is not just exclusive to nodejs, we can use it with other programing languages as well
+- MongoDB is NoSQL database which is different from SQL databases like mySQL and PostgreSQL
+- SQL is an abbreviation of Structured Query Language
+- NoSql is Not Only SQL
 
-1. Make a app that show
+## Installation
 
-   - Country name, region
+### MongoDb
 
-   - TOP 5 news and
+1. Download from [Here](https://www.mongodb.com/download-center/community)
+2. Follow On Screen Instruction
+3. Done!!!
 
-   - current weather in celsius of user location
+### MongoDB Admin Tool
 
-2. User location will be based on IP address if no location is provided by user on command prompt
+1. Download from [Here](https://robomongo.org/download)
 
-## Important Note
+### MongoDB + NodeJs
 
-Make sure you show only relevant part of response received from every API and don’t forget to handle errors
-
-## Tips
-
-- Use accuweather [city search api](http://dataservice.accuweather.com/locations/v1/cities/search?apikey=LCQRbJLFlAVF6bTBJYdhy8drquSRmcfs&q=karachi) to get city key that can then be use to get 1 day [forecast](http://dataservice.accuweather.com/forecasts/v1/daily/1day/261158?apikey=LCQRbJLFlAVF6bTBJYdhy8drquSRmcfs)
-- Use process.argv to directly get the city name, expect user to write node app karachi
-- Use request-ip npm module to get client side ip
+1. `npm init -y`
+2. `npm i mongodb`

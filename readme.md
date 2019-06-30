@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Command Line Arguments
 
 - Yargs Basic
@@ -321,12 +322,16 @@ const options = {
 =======
 # Serving static files in Express
 >>>>>>> d01624b25d31dfb53ce217ba2f3b886c715f4b7d
+=======
+# Serving Dynamic files in Express
+>>>>>>> 63dca4106356bdbad2b9a5a77d0a192445d7a41b
 
 1. Just run command `node index.js`
-2. Open `http://localhost:3000/about.html` & `http://localhost:3000/index.html`
+2. Open `http://localhost:3000/`
 
 # Output
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Hello World in ExpressJs
 
@@ -435,3 +440,6 @@ Make sure you show only relevant part of response received from every API and do
 ![](https://i.ibb.co/0cMrbSv/Screenshot-from-2019-06-29-18-41-14.png)
 ![](https://i.ibb.co/YTkymFC/Screenshot-from-2019-06-29-18-41-17.png)
 >>>>>>> d01624b25d31dfb53ce217ba2f3b886c715f4b7d
+=======
+![](https://i.ibb.co/v32MM4D/Screenshot-from-2019-06-29-18-49-28.png)
+>>>>>>> 63dca4106356bdbad2b9a5a77d0a192445d7a41b

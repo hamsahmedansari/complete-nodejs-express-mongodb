@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Command Line Arguments
 
 - Yargs Basic
@@ -317,11 +318,16 @@ const options = {
 };
 =======
 # Express
+=======
+# Serving static files in Express
+>>>>>>> d01624b25d31dfb53ce217ba2f3b886c715f4b7d
 
-## Installation
+1. Just run command `node index.js`
+2. Open `http://localhost:3000/about.html` & `http://localhost:3000/index.html`
 
-`npm i express`
+# Output
 
+<<<<<<< HEAD
 ## Hello World in ExpressJs
 
 1. Add following code in `index.js`
@@ -425,3 +431,7 @@ Make sure you show only relevant part of response received from every API and do
 - Use process.argv to directly get the city name, expect user to write node app karachi
 - Use request-ip npm module to get client side ip
 >>>>>>> f44f609358d5be30fb4a061a178b24b5ddf2cdb2
+=======
+![](https://i.ibb.co/0cMrbSv/Screenshot-from-2019-06-29-18-41-14.png)
+![](https://i.ibb.co/YTkymFC/Screenshot-from-2019-06-29-18-41-17.png)
+>>>>>>> d01624b25d31dfb53ce217ba2f3b886c715f4b7d

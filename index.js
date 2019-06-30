@@ -17,10 +17,18 @@ app.use(express.static(publicDirPath));
 // });
 
 app.get("/", (req, res) => {
+  if (!req.query.teacher) {
+    return res.send({ error: "Teacher name not provided!" });
+  } else if (!req.query.course) {
+    return res.send({ error: "Course name not provided!" });
+  }
+
+  const { teacher, course } = req.query;
+
   res.render("index", {
     title: "This is dynamic data page",
-    course: "We are learning this in our express class",
-    teacher: "Aamir Pinger"
+    course: `we are learning this in our ${course} class`,
+    teacher
   });
 });
 

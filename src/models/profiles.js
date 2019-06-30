@@ -20,6 +20,7 @@ const profileSchema = new mongoose.Schema({
   },
   email: {
     type: String,
+    unique: true,
     required: true,
     validate(value) {
       if (!validator.isEmail(value)) {
@@ -50,5 +51,23 @@ profileSchema.pre("save", async function(next) {
   console.log(profile.password, "hashed password");
   next();
 });
+
+profileSchema.statics.findByCredentials = async (email, password) => {
+  const profile = await Profiles.findOne({ email });
+
+  if (!profile) {
+    throw new Error("Unable to login");
+  }
+
+  const isMatch = await bcrypt.compare(password, profile.password);
+
+  if (!isMatch) {
+    throw new Error("Unable to login");
+  }
+
+  return profile;
+};
+
 const Profiles = mongoose.model("Profiles", profileSchema);
+
 module.exports = Profiles;

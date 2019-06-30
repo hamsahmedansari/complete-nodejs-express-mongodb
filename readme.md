@@ -36,3 +36,4 @@
 
 - Password stored as a hash value
   - Install bcryptjs `npm i bcryptjs`
+  - [Click Here](https://github.com/hamsahmedansari/complete-nodejs-express-mongodb/tree/113871c6d759c64295a85211c461f6029bd66f4b)

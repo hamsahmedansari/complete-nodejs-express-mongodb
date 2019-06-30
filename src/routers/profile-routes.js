@@ -81,4 +81,17 @@ routes.delete("/profiles/:id", async (req, res) => {
   }
 });
 
+routes.post("/profiles/login", async (req, res) => {
+  try {
+    const profile = await Profiles.findByCredentials(
+      req.body.email,
+      req.body.password
+    );
+
+    res.send(profile);
+  } catch (e) {
+    res.status(400).send();
+  }
+});
+
 module.exports = routes;

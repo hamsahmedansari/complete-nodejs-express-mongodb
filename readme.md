@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Command Line Arguments
 
 - Yargs Basic
@@ -313,10 +314,64 @@ const options = {
     app_key: "3567e7de14aef1b99bc70b82e7bae6e1"
   }
 };
+=======
+# Express
+
+## Installation
+
+`npm i express`
+
+## Hello World in ExpressJs
+
+1. Add following code in `index.js`
+
+```
+const express = require("express");
+const app = express();
+
+// get method check route and invoke callback function provided
+app.get("/", function(req, res) {
+  res.send("Welcome to world of Express");
+});
+app.get("/helloworld", function(req, res) {
+  res.send("hello world");
+});
+
+app.listen(3000, () => {
+  console.log("server is up, check http://localhost:3000");
+});
+
 ```
 
-## Output
+2. Then Run `node index.js`
+3. Open Browser Following routes
 
+   - `http://localhost:3000/helloworld`
+   - `http://localhost:3000/`
+
+4. To Exist Press `Ctrl +C` in your Terminal/Cmd
+
+## Universal Routing
+
+Add these and check result
+
+```
+app.get('/docs/*', function(req, res){
+ res.send('No document found')
+})
+app.get('*', function(req, res){
+ res.send('404 Error Page')
+})
+>>>>>>> 99cd1fead05fab0937d7686dc3f0106569819410
+```
+
+## Render Html
+
+Check `renderHtml.js` and run `node renderHtml.js`
+
+## OutPut
+
+<<<<<<< HEAD
 ![](https://i.ibb.co/0sgjqjF/Screenshot-from-2019-06-29-16-30-28.png)
 
 # Useful Apis
@@ -336,3 +391,11 @@ const options = {
 4. Location details based on IP address (You can use request-ip npm module to get client side ip)
    - https://ipgeolocation.io/
 >>>>>>> 49c9db5457cd9fc00050659717071ccba439b4e3
+=======
+![](https://i.ibb.co/DL9TXds/Screenshot-from-2019-06-29-18-10-32.png)
+![](https://i.ibb.co/0VRNZTs/Screenshot-from-2019-06-29-18-10-11.png)
+![](https://i.ibb.co/9HqVRZS/Screenshot-from-2019-06-29-18-10-19.png)
+![](https://i.ibb.co/VY7gFMV/Screenshot-from-2019-06-29-18-19-03.png)
+![](https://i.ibb.co/jbQ6MfH/Screenshot-from-2019-06-29-18-19-06.png)
+![](https://i.ibb.co/CVP6PnY/Screenshot-from-2019-06-29-18-25-34.png)
+>>>>>>> 99cd1fead05fab0937d7686dc3f0106569819410

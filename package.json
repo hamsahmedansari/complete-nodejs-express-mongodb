@@ -28,10 +28,14 @@
   "dependencies": {
     "chalk": "^2.4.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "validator": "^11.0.0",
     "yargs": "^13.2.4"
 =======
     "request": "^2.88.0",
+=======
+    "express": "^4.17.1",
+>>>>>>> 99cd1fead05fab0937d7686dc3f0106569819410
     "validator": "^11.0.0"
 >>>>>>> 49c9db5457cd9fc00050659717071ccba439b4e3
   }

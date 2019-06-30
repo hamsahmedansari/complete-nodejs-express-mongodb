@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Command Line Arguments
 
 - Yargs Basic
@@ -434,21 +435,33 @@ Check `renderHtml.js` and run `node renderHtml.js`
 
 ALL THAT MATTER CLI APP into a web app
 >>>>>>> 775e1dd890b1477297a41c1e898c0a748381a60d
+=======
+# MongoDB
 
-## Requirement
+## Overview
+>>>>>>> 60be7579cfd3d075945af73c27d469bebae6a2c4
 
-1. Make a app that show
+- MongoDB is an open source database and it's also available for all operating systems
+- MongoDB is not just exclusive to nodejs, we can use it with other programing languages as well
+- MongoDB is NoSQL database which is different from SQL databases like mySQL and PostgreSQL
+- SQL is an abbreviation of Structured Query Language
+- NoSql is Not Only SQL
 
-   - Country name, region
+## Installation
 
-   - TOP 5 news and
+### MongoDb
 
-   - current weather in celsius of user location
+1. Download from [Here](https://www.mongodb.com/download-center/community)
+2. Follow On Screen Instruction
+3. Done!!!
 
-2. User location will be based on IP address if no location is provided by user on command prompt
+### MongoDB Admin Tool
 
-## Important Note
+1. Download from [Here](https://robomongo.org/download)
 
+### MongoDB + NodeJs
+
+<<<<<<< HEAD
 Make sure you show only relevant part of response received from every API and don’t forget to handle errors
 
 ## Tips
@@ -479,3 +492,7 @@ Make sure you show only relevant part of response received from every API and do
 =======
 ![](https://i.ibb.co/vzStDmp/Screenshot-from-2019-06-30-16-00-56.png)
 >>>>>>> 97120518d02839cae101201db80773fb35ed2c19
+=======
+1. `npm init -y`
+2. `npm i mongodb`
+>>>>>>> 60be7579cfd3d075945af73c27d469bebae6a2c4

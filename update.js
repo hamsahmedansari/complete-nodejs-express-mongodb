@@ -16,15 +16,9 @@ MongoClient.connect(
 
     const db = client.db(databaseName);
     db.collection("profile")
-      .updateOne(
-        {
-          email: "aamirpinger@yahoo.com"
-        },
-        {
-          $set: {
-            name: "Aamir Pinger"
-          }
-        }
+      .updateMany(
+        { email: "aamirpinger@yahoo.com" },
+        { $set: { name: "Mr.Pinger" } }
       )
       .then(result => {
         console.log(result);
@@ -32,6 +26,7 @@ MongoClient.connect(
       .catch(err => {
         console.log(err);
       });
+
     console.log("DB connected successfully!");
   }
 );

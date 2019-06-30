@@ -13,10 +13,18 @@ MongoClient.connect(
       return console.log("Error connecting database!");
     }
     const db = client.db(databaseName);
-    db.collection("profile").insertOne({
-      name: "Aamir",
-      email: "aamirpinger@yahoo.com"
-    });
+
+    db.collection("profile").insertMany([
+      {
+        name: "Irfan",
+        email: "irfanali@xyz.com"
+      },
+      {
+        name: "Zia Khan",
+        email: "zia@panacloud.com"
+      }
+    ]);
+
     console.log("DB connected successfully!");
   }
 );

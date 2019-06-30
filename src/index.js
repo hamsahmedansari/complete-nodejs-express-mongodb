@@ -3,9 +3,8 @@ const Profiles = require("./models/profiles");
 
 const newRec = Profiles({
   name: "Aamir",
-  age: 38,
-  graduate: true,
-  email: "aamirpinger@yahoo.com"
+  age: -1,
+  graduate: true
 });
 
 newRec

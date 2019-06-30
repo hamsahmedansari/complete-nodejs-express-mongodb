@@ -1,40 +1,49 @@
-# NPM Packages
+# Command Line Arguments
 
-- [validator](https://www.npmjs.com/package/validator)
-- [chalk](https://www.npmjs.com/package/chalk)
+- Yargs Basic
+- Yargs Arguments
+- Yargs Arguments Advanced
 
-### Installation
+## Yargs Basic
 
-`npm i chalk`
-
-`npm i validator`
-
-### Verify Installation
-
-You can verify installation by checking it in package.json in root of your project
+### Command
 
 ```
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "validator": "^11.0.0"
-  }
+node yargsBasic.js Aamir
+
 ```
 
-## Output
+### Output
 
-![](https://i.imgur.com/1Wqln00.png)
+![](https://i.imgur.com/iCuilxB.png)
 
-### Nodemon
+## Yargs Argument
 
-#### Install Globally
+### Command
 
-- You don't need to install this in every project your install it globally by `-g` and access every where
-- `npm install -g nodemon`
+```
+node yargsArgument.js --help
 
-#### Run Nodemon
+```
 
-`nodemon index.js`
+```
+node yargsArgument.js --title=Aamir
 
-#### Output
+```
 
-![](https://i.imgur.com/q1JUGmL.png)
+### Output
+
+![](https://i.imgur.com/7fAkICH.png)
+
+## Yargs Argument Advanced
+
+### Command
+
+```
+node yargsArgumentAdvance.js  delete -t "hello world"
+
+```
+
+### Output
+
+![](https://i.imgur.com/iOQzcaC.png)

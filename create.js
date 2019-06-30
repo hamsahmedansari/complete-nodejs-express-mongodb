@@ -1,9 +1,10 @@
-const mongodb = require("mongodb");
-// To initialize the connection
-const MongoClient = mongodb.MongoClient;
-
+const { MongoClient, ObjectId } = require("mongodb");
 const connectionURL = "mongodb://127.0.0.1:27017";
 const databaseName = "myDB";
+
+const newId = ObjectId();
+console.log(newId);
+console.log(newId.getTimestamp());
 
 MongoClient.connect(
   connectionURL,
@@ -12,27 +13,22 @@ MongoClient.connect(
     if (error) {
       return console.log("Error connecting database!");
     }
-    const db = client.db(databaseName);
 
-    db.collection("profile").insertMany(
-      [
-        {
-          name: "Irfan",
-          email: "irfanali@xyz.com"
-        },
-        {
-          name: "Zia Khan",
-          email: "zia@panacloud.com"
-        }
-      ],
+    const db = client.db(databaseName);
+    db.collection("profile").insertOne(
+      {
+        _id: newId,
+        name: "Pinger",
+        email: "aamirpinger@yahoo.com"
+      },
       (error, response) => {
         if (error) {
-          return console.log("Error inserting document!");
+          return console.log("Enable to add");
         }
+
         console.log(response.ops);
       }
     );
-
     console.log("DB connected successfully!");
   }
 );

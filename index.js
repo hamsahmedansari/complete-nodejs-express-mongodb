@@ -65,12 +65,15 @@ yargs.parse();
 const express = require("express");
 const app = express();
 const path = require("path");
+const hbs = require("hbs");
 
 const publicDirPath = path.join(__dirname, "./public");
-const viewFolderPath = path.join(__dirname, "./templates");
-
+// const viewFolderPath = path.join(__dirname, "./templates");
+const viewFolderPath = path.join(__dirname, "./templates/views");
+const partialFolderPath = path.join(__dirname, "./templates/partials");
 app.set("view engine", "hbs");
 app.set("views", viewFolderPath);
+hbs.registerPartials(partialFolderPath);
 app.use(express.static(publicDirPath));
 
 // app.get("/", (req, res) => {
